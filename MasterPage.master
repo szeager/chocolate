@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 60%;
+            text-align:center;
+            border-bottom-color:black;
+            float:right;
+        }
+        .auto-style2 {
+            width: 176px;
+           
+        }
+
+     .daohang{ width:15%; height:30px; float:left; text-align:center; font-size:15px}
+     .dl{width:50%; height:20px; float:left; text-align:center; font-size:14px; line-height:1px;}
+     .zc{width:50%; height:20px; float:left; text-align:center; font-size:14px; line-height:1px;}
+     .hy{width:50%; height:20px; float:left; text-align:center; font-size:14px; line-height:1px;}
+     .daohang a:link{ color:#636363; text-decoration:none}
+     .daohang a:hover{ color:#903; text-decoration:underline}
+     .daohang a:visited{ color:#636363; text-decoration:none}
+     .daohang a:active{ color:#903; text-decoration:none}
+    
+     .daohangt{ width:18%; height:30px; text-align:center; font-size:15px;text-decoration:none; }
+     .daohangt a:link{ color:#636363; text-decoration:none}
+     .daohangt a:hover{ color:#903; text-decoration:underline}
+     .daohangt a:visited{ color:#636363; text-decoration:none}
+     .daohangt a:active{ color:#903; text-decoration:none}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div> 
+    <div style =" width:100%; height:20px; border-bottom:1px solid #eeeeee; ">
+        <table style =" width:100%; height:20px">
+          <tr>
+           <td class = "daohang" style = " width:25%">酒心巧克力、你值得拥有</td>
+           <td class = "daohang"></td>
+           <td class = "daohang"></td>
+           <td id="dl" class = "daohang"  >
+              <a href="denglu.aspx"> <asp:Literal ID="dlu" runat="server">登陆</asp:Literal></a>
+               <asp:Literal ID="hy" runat="server" Visible="False"></asp:Literal>
+           </td>
+           <td class = "daohang"  id="zc"> 
+               <a href="zhuce.aspx"> <asp:Literal ID="zce" runat="server">注册</asp:Literal></a></td>
+            <td class = "daohang"></td>
+           <td class = "daohang"></td>
+           <td class = "daohang"></td>
+          </tr>
+        </table>
+      </div>
+    <div style="width:100%;height:300px; " id="top">
+        <img src ="images/shouye.png" style="width:99%; height:299px;" /></div>
+    <div id="menu">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td  class="daohangt"><a href ="shouye.aspx" >首页</a></td>
+                <td  class="daohangt"><a href ="jieshao.aspx" >产品介绍</a></td>
+                <td  class="daohangt"><a href ="gouxuan.aspx" >产品选购</a></td>
+                <td  class="daohangt"><a href ="dingdan.aspx" >订单管理</a></td>
+                <td  class="daohangt"><a href ="liuyan.aspx" >客户留言</a></td>
+            </tr>
+        </table>
+    </div>
+        <div id="mbody" style="margin-top:20px;width:90%; min-height:600px; margin-left:5%">  
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder></div>
+        <div id="bottom" style="text-align:center; background-color:mistyrose">
+            <hr style="background-color: #000000; color: #FFFFFF; width: 95%" />
+            15计应5-张文意-15240451</div>
+
+    </div>
+    </form>
+</body>
+
+   
+</html>
